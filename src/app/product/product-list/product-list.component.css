@@ -1,0 +1,41 @@
+div.grid{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    
+}
+
+.grid-cols-4{
+    grid-template-columns:repeat(4, minmax(0,1fr));
+}
+
+.gap-4{
+    min_gap:4px
+}
+
+.prodImage{
+    width:10rem;
+    height:10rem
+}
+
+.product-card{
+    margin: 10px;
+    border: 0;
+}
+
+mat-card{
+    box-shadow: 5px 5px 5px lightgrey;
+}
+
+mat-card-title{
+  color:white;
+}
+
+mat-card:hover{
+    transform: scale(1.05);
+    cursor:pointer
+}
+
+mat-card{
+    transition:transform .2s ;
+}

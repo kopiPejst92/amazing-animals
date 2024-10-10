@@ -1,8 +1,7 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
 import { ProductListComponent } from './product-list/product-list.component';
-import { MatCardModule } from '@angular/material/card'; 
-
 
 @NgModule({
   declarations: [
@@ -13,4 +12,5 @@ import { MatCardModule } from '@angular/material/card';
     MatCardModule
   ]
 })
+
 export class ProductModule { }
