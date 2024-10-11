@@ -3,6 +3,10 @@ cart-list-item span img{
     height:100px;
 }
 
+img:hover{
+    transform:scale(5.0);
+}
+
 .price{
     font-weight:550
 }
