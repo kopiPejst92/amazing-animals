@@ -2,7 +2,7 @@
     <h2>Najpopularniejsze</h2>
     <div class="grid grid-cols-4 gap-4">
         <div *ngFor="let product of products">
-            <mat-card class="product-card" appearance="outlined">
+            <mat-card  mat-stroked-button  class="product-card" (click)="addToCart(product)" appearance="outlined">
                 <img mat-card-image class="prodImage" src="assets/images/{{product.image_url}}"
                     alt="Photo of {{product.name}}">
                 <mat-card-content>
@@ -12,4 +12,5 @@
             </mat-card>
         </div>
     </div>
+
 </div>

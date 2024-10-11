@@ -23,3 +23,16 @@ body {
     max-width:800px;
     margin:auto;
 }
+
+.text-right {
+    text-align: right;
+}
+
+.right {
+    margin:auto;
+    
+}
+
+.text-center {
+    text-align: center;
+}

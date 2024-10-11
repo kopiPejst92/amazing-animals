@@ -2,3 +2,11 @@ cart-list-item span img{
     width:100px;
     height:100px;
 }
+
+.price{
+    font-weight:550
+}
+
+button{
+    margin-right:8px;
+}

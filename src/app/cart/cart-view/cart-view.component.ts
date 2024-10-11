@@ -17,11 +17,23 @@ export class CartViewComponent implements OnInit {
   ngOnInit(): void {
     this.cartService.getCartItems().subscribe(data => {
       this.cartItems = data
+      this.totalPrice=this.getTotalPrice();
     });
   }
 
-  getTotalPrice(): number{
-    return 0;
+  getTotalPrice(): number {
+    let total=0;
+    for (let item of this.cartItems){
+      	total+=item.price;
+    }
+    return total;
   }
 
+  clearCart(): void{
+    this.cartService.clearCart().subscribe();
+  }
+
+  checkout(): void{
+    this.cartService.checkout(this.cartItems).subscribe();
+  }
 }

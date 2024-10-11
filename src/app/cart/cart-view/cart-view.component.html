@@ -3,9 +3,20 @@
     <mat-card>
         <mat-list>
             <mat-list-item *ngFor="let item of cartItems">
-                    <img matListItemAvatar src="assets/images/{{item.image_url}}"/>
-                    <span matListItemTitle>{{item.name}}</span>
-                    <span matListItemLine>{{item.price | currency:'USD'}}</span>
+                <img matListItemAvatar src="assets/images/{{item.image_url}}" />
+                <span matListItemTitle>{{item.name}}</span>
+                <span matListItemLine>{{item.price | currency:'USD'}}</span>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <mat-card-subtitle class="price">Total Price(USD)</mat-card-subtitle>
+                <mat-card-footer class="price">{{totalPrice | currency:'USD'}}</mat-card-footer>
+            </mat-list-item>
+            <mat-list-item class="text-right">
+                <button mat-raised-button (click)="clearCart()">Clear cart</button>
+            </mat-list-item>
+            <mat-list-item class="text-right">
+                <button mat-raised-button (click)="checkout()" color="accent">Checkout</button>
             </mat-list-item>
         </mat-list>
     </mat-card>
